@@ -10,7 +10,7 @@ Tópicos do curso, cobrindo o ciclo completo de desenvolvimento de software com 
       Spec driven development
 - [ ] Criar uma docs com um PRD dentro do projeto
 
-      A PRD () tem o contexto completo, a card é uma parte desse contexto, transcrevendo isso em tarefa menores.
+      A PRD (Product Requirements Document, ou Documento de Requisitos do Produto) tem o contexto completo, a card é uma parte desse contexto, transcrevendo isso em tarefa menores.
 - [ ] Implementar com agent
 
       Usando o modelo correto, prompt engineering, harness do claude.md e a referência ao PRD e CARD.
