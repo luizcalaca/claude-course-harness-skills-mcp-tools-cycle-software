@@ -3,7 +3,7 @@ curl -fsSL https://get.n8n.io | sh
 
 ________
 
-### Langraph
+### LangGraph - fluxo determinístico
 
 ```
 from typing import TypedDict
