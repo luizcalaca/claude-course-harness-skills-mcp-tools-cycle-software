@@ -102,3 +102,23 @@ print(result["test_report"])
 
 
 ```
+
+
+| Parâmetro	        |             Para que serve 
+| ------ | --------------- | 
+|----------------------------------------------------------------------------------------------------------------------------------------------|
+| model	| Modelo utilizado, como gpt-4.1 ou gpt-4.1-mini. |
+|temperature |	Controla a aleatoriedade da geração. |
+max_tokens	| Limita a quantidade de tokens gerados, conforme a API e o modelo.
+timeout	|Tempo máximo de espera pela requisição.
+max_retries	|Número de tentativas adicionais em caso de falha.
+api_key	|Chave de autenticação da API.
+base_url	|Endpoint alternativo ou proxy compatível.
+streaming	|Permite receber a resposta em partes.
+top_p	|Controla a amostragem pelo conjunto de tokens mais prováveis.
+frequency_penalty	|Penaliza a repetição frequente de tokens.
+presence_penalty	|Penaliza tokens já utilizados, incentivando novos assuntos.
+seed	|Tenta tornar a geração mais reproduzível, quando suportado.
+n	|Quantidade de respostas geradas por requisição.
+reasoning_effort	|Controla o esforço de raciocínio em modelos compatíveis.
+
