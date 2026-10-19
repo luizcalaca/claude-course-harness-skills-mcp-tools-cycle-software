@@ -1,0 +1,182 @@
+{
+  "name": "My workflow",
+  "nodes": [
+    {
+      "parameters": {
+        "options": {}
+      },
+      "id": "61d2f03f-2421-4efc-97bb-2010a03eefe8",
+      "name": "When chat message received",
+      "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+      "typeVersion": 1.5,
+      "position": [
+        0,
+        0
+      ],
+      "alwaysOutputData": true,
+      "webhookId": "d2114afb-4652-4fef-9d88-358c39018571"
+    },
+    {
+      "parameters": {
+        "agentId": {
+          "__rl": true,
+          "mode": "id",
+          "value": "80jt4ThM5K7eJzA9",
+          "cachedResultName": "Linear Task Creator"
+        },
+        "message": "={{ $json.chatInput }}",
+        "advanced": {
+          "allowOtherNodesData": true
+        }
+      },
+      "id": "ea7db25d-96fd-481c-bc70-07df602d7d94",
+      "name": "Linear Task Creator",
+      "type": "n8n-nodes-base.messageAnAgent",
+      "typeVersion": 3.1,
+      "position": [
+        176,
+        -96
+      ]
+    },
+    {
+      "parameters": {
+        "agentId": {
+          "__rl": true,
+          "mode": "id",
+          "value": "XVYYOqGf5eocVT6Y",
+          "cachedResultName": "Implementador"
+        },
+        "message": "={{ $json.text }}",
+        "advanced": {
+          "session": {
+            "session": {
+              "sessionIdType": "customKey",
+              "sessionKey": "={{ $execution.id }}-implementador"
+            }
+          }
+        }
+      },
+      "id": "756c79a6-fe99-45aa-b497-a23d061d00c6",
+      "name": "Implementador",
+      "type": "n8n-nodes-base.messageAnAgent",
+      "typeVersion": 3.1,
+      "position": [
+        272,
+        256
+      ]
+    },
+    {
+      "parameters": {
+        "agentId": {
+          "__rl": true,
+          "mode": "id",
+          "value": "8GZiGSOpVOfXIHhZ",
+          "cachedResultName": "Test Runner"
+        },
+        "message": "={{ $json.text }}",
+        "advanced": {
+          "session": {
+            "session": {
+              "sessionIdType": "customKey",
+              "sessionKey": "={{ $execution.id }}-test-runner"
+            }
+          }
+        }
+      },
+      "id": "468838b6-fdca-49a0-af6b-25ddfaf25cc8",
+      "name": "Test Runner",
+      "type": "n8n-nodes-base.messageAnAgent",
+      "typeVersion": 3.1,
+      "position": [
+        720,
+        -96
+      ]
+    },
+    {
+      "parameters": {
+        "agentId": {
+          "__rl": true,
+          "mode": "id",
+          "value": "fYqTFAHe4NYTwpNx",
+          "cachedResultName": "GitHub PR Automerge Reviewer"
+        },
+        "message": "={{ $json.text }}",
+        "advanced": {
+          "session": {
+            "session": {
+              "sessionIdType": "customKey",
+              "sessionKey": "={{ $execution.id }}-github-pr-reviewer"
+            }
+          }
+        }
+      },
+      "id": "77cdc2a8-8c46-4ede-8d8f-4a137a3f3f63",
+      "name": "GitHub PR Automerge Reviewer",
+      "type": "n8n-nodes-base.messageAnAgent",
+      "typeVersion": 3.1,
+      "position": [
+        864,
+        224
+      ]
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When chat message received": {
+      "main": [
+        [
+          {
+            "node": "Linear Task Creator",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Linear Task Creator": {
+      "main": [
+        [
+          {
+            "node": "Implementador",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Implementador": {
+      "main": [
+        [
+          {
+            "node": "Test Runner",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Test Runner": {
+      "main": [
+        [
+          {
+            "node": "GitHub PR Automerge Reviewer",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "versionId": "b0c1e030-4196-4035-9305-6742477c01f7",
+  "meta": {
+    "instanceId": "0cc6cf529a6ac21db59edaecf20d40595c283ace8bdbf5bbb223a05aad8d341e"
+  },
+  "nodeGroups": [],
+  "id": "pCAOIdfrxc54J3Sp",
+  "tags": []
+}
