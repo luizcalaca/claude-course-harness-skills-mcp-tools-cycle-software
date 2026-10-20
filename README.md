@@ -1,6 +1,6 @@
 # Conteúdo Programático
 
-## 2. Conteúdo programático
+## Conteúdo programático
 
 O conteúdo programático do curso compreende os seguintes temas:
 
@@ -30,13 +30,13 @@ O conteúdo programático do curso compreende os seguintes temas:
 
 13. **Segurança e Autonomia de Agentes:** segurança, limites e critérios para definição do nível de autonomia dos agentes.
 
-## 3. Carga horária e cronograma
+## Carga horária e cronograma
 
-### 3.1. Carga horária
+### Carga horária
 
 O curso terá carga horária total de **12 (doze) horas**.
 
-### 3.2. Cronograma
+### Cronograma
 
 As aulas serão realizadas em **3 (três) encontros**, com duração de **4 (quatro) horas cada**, no período das **8h às 12h**, conforme o cronograma abaixo:
 
